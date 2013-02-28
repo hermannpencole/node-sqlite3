@@ -86,7 +86,7 @@ Handle<Value> Statement::New(const Arguments& args) {
 
     int length = args.Length();
 
-    if (length <= 0 || !Database::HasInstance(args[0])) {
+    if (length <= 0) {
         return ThrowException(Exception::TypeError(
             String::New("Database object expected")));
     }
